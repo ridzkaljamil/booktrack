@@ -48,7 +48,7 @@ class RegisterController extends RegisterCtrl
 
         // Save the user
         $allowedPostFields = array_keys($rules);
-        $user              = $this->getUserEntity();
+        $user = $this->getUserEntity();
         $user->fill($this->request->getPost($allowedPostFields));
 
         // Workaround for email only registration/login
@@ -82,12 +82,15 @@ class RegisterController extends RegisterCtrl
         }
 
         // Set the user active
+        // Set user aktif
         $user->activate();
 
-        // $authenticator->completeLogin($user);
+        // ✅ Set flashdata pesan sukses
+        session()->setFlashdata('message', 'Akun berhasil dibuat. Silakan login.');
 
-        // Success!
-        session()->setFlashdata(['msg' => 'New admin added successfully']);
-        return redirect()->to('admin/users');
+        // ✅ Redirect ke halaman login
+        return redirect()->to('login');
+
+
     }
 }

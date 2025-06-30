@@ -3,6 +3,11 @@
 <?= $this->section('head') ?>
 <title><?= lang('Auth.login') ?></title>
 <?= $this->endSection() ?>
+<?php if (session()->getFlashdata('message')): ?>
+  <div class="alert alert-success">
+    <?= session()->getFlashdata('message') ?>
+  </div>
+<?php endif ?>
 
 <?= $this->section('back'); ?>
 <a href="<?= base_url(); ?>" class="btn btn-outline-primary m-3 position-absolute">
@@ -73,7 +78,7 @@
         <!-- <?php if (setting('Auth.allowRegistration')): ?>
           <p class="text-center"><?= lang('Auth.needAccount') ?> <a href="<?= url_to('register') ?>"><?= lang('Auth.register') ?></a></p>
         <?php endif ?> -->
-        
+
         <div class="text-center">
           <a href="<?= url_to('register') ?>" class="text-decoration-none">
             Belum punya akun? Daftar

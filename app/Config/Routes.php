@@ -33,6 +33,9 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/book', 'Home::book');
+$routes->get('register', 'Users\RegisterController::index');
+$routes->post('register', 'Users\RegisterController::registerAction');
+
 
 service('auth')->routes($routes);
 
