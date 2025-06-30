@@ -1,6 +1,6 @@
 # BookTrack - Aplikasi Manajemen Buku Perpustakaan
 
-![Preview](\screenshots\home.png)
+![Preview](screenshots/home.png)
 
 > [!NOTE]
 >
@@ -75,9 +75,9 @@ password : superadmin
 
 ## Anggota Kelompok
 
-Ridzkal Jamil (312310048)
-Reza Fadlillah Ardi (312310032)
-Delsa Pramuditia (312310019)
-Iis Cuningsih (312310041)
+Ridzkal Jamil (312310048),
+Reza Fadlillah Ardi (312310032),
+Delsa Pramuditia (312310019),
+Iis Cuningsih (312310041).
 
 Kelas TI.23.C1
